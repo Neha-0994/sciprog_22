@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 
+//Calculate using macautin series
 double arctanh1(const double x,const  double delta){
 	
 	int n=0;
@@ -8,7 +9,7 @@ double arctanh1(const double x,const  double delta){
 	double ele,value;
 	do{
 		
-		value=2*n+1;
+		value=2*n+1; 
 		ele = pow(x,value)/value;
 		arctan+=ele;
 		n++;
@@ -16,7 +17,7 @@ double arctanh1(const double x,const  double delta){
 	}while(fabs(ele)>=delta);
 	return arctan;
 }
-
+//Calculate using natural logarithms
 double arctanh2(const double x){
 
 	return (log(1+x) - log(1-x))/2;
@@ -25,9 +26,9 @@ double arctanh2(const double x){
 
 int main(){
 	int j;
-	int length = 1000;
+	int length = 1000; 
 	double delta,x;
-	double tan1[length],tan2[length];
+	double tan1[length],tan2[length];//To store results for both methods
 	printf("Enter a real positive number for precision: \n");
 	scanf("%lf",&delta);
 	while(x<=0.9 && j<length){
