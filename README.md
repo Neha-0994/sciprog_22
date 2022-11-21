@@ -14,7 +14,7 @@ Fork this repository into your github account. From there;
 
 - Each folder contains code of each week. For example, week 2 practicals are in the folder practical2, week 3 are in practical3 and so on.
 - .C files are codes writtem in C.
-- Some folder contains object files which are only readable to machines.
+- Some folder contains executable files which are only readable to machines.
 
 
 
